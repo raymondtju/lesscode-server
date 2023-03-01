@@ -8,7 +8,7 @@ const users = require("./app/api/v1/users/router");
 const handlerError = require("./app/middleware/handler-error");
 const notFound = require("./app/middleware/not-found");
 
-app.use(logger("common"));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
