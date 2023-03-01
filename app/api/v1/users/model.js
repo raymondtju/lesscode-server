@@ -36,6 +36,8 @@ const UserSchema = new Schema(
       type: Number,
       required: true,
     },
+    status: String,
+    verificationCode: String,
   },
   { timestamps: true }
 );
