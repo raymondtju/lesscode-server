@@ -2,12 +2,14 @@ const createError = require("http-errors");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const cors = require("cors");
 
 const app = express();
 const users = require("./app/api/v1/users/router");
 const handlerError = require("./app/middleware/handler-error");
 const notFound = require("./app/middleware/not-found");
 
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
